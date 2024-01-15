@@ -4,7 +4,7 @@ It will be managed by administrator.
 
 Framework : Flask. 
 Languages : Python.
-Database : SQL Server.
+Database : SQL Server.  #python_veterinary_treatment.sql
 IDLE: Pycharm
 
 #Install Some Library after import the project into pycharm 
