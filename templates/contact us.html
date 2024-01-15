@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<style>
+      body {
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+       {% include 'css/style3.css' %}
+	   {% include 'css/style3.css' %}
+    </style>
+<body>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+                <li><a href="/patient">Booking Appointment</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+
+	<center><h2 class="title">Contact Us</h2></center>
+	
+  <main>
+    <h2>Contact Us</h2>
+    <p>Thank you for considering My Veterinary Clinic for your pet care needs. If you have any questions or would like to schedule an appointment, please don't hesitate to contact us.</p>
+    
+    <form action="mailto:iit205915130@bhc.edu.in" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <br>
+      <input type="submit" value="Send">
+      <input type="reset" value="Clear">
+    </form>
+    
+    <p>You can also reach us by phone at +91 8754338390 or by email at <a href="mailto:info@myveterinaryclinic.com">it205915130@bhc.edu.in</a>.</p>
+    <p>Our clinic is located at:</p>
+    <address>
+      123 Main Street<br>
+      Anytown, TAMIL NADU , TRICHY, 12345
+    </address>
+  </main>
+  
+  
+  
+  
+
+</body>
+</html>

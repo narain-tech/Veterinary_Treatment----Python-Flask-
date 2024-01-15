@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<style>
+      body {
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+	   {% include 'css/style2.css' %}
+    </style>
+<body>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+				<li><a href="/patient">Booking Appointment</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<center><h3 class="title">Create Registration</h3></center>
+	<form  action="/patient_register" method="post" name="form1" id="form1">
+  <table height="127" align="center">
+    <tr>
+      <td>Name</td>
+      <td><input name="name" type="text" id="name"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Contact</td>
+      <td><input name="contact" type="number" id="contact"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input name="email" type="email" id="email"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><textarea name="address" id="address" required=""></textarea></td>
+    </tr>
+    <tr>
+      <td>UserName</td>
+      <td><input name="username" type="text" id="username"  required="" /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input name="password" type="password" id="password"   required="" /></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><span class="tp">
+        <input type="submit" name="btn" value="Register" />
+      </span></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</form>
+ 
+ 
+</body>
+</html>

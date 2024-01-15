@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<style>
+      body {
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+       {% include 'css/style2.css' %}
+    </style>
+<body onLoad="flashMessage()">
+<script>
+    function flashMessage()
+    {
+        if("{{flashMessage}}"=="True"){
+            alert("{{data}}");
+        }
+    }
+</script>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+		
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+				<li><a href="/patient_appointment">Booking Appointment</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<li><a href="/">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<center><h3 class="title">Booking Appointment</h3></center>
+	
+ <form  action="/patient_appointment" method="post" name="form1" id="form1">
+  <table height="127" align="center">
+  <tr>
+      <td>Full Name </td>
+      <td><input name="full_name" type="text" id="name"   required="" /></td>
+    </tr>
+	<tr>
+      <td>Email Address </td>
+      <td><input name="email_id" type="email" id="email"   required="" /></td>
+    </tr>
+	<tr>
+      <td>Cell Phone</td>
+      <td><input name="phone_num" type="number" id="phone"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Pet's Name </td>
+      <td><input name="pet_name" type="text" id="pet_name"   required="" /></td>
+    </tr>
+    <tr>
+                        <td>Species</td>
+                        <td><label>
+                          <select name="species" id="species">
+						   <option value="">Select Your Species</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Bird">Bird</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Cow">Cow</option>
+                            <option value="Rabbit">Rabbit</option>
+							<option value="Horse">Horse</option>
+							<option value="Goat">Goat</option>
+							<option value="Other">Other</option>
+                          </select>
+                        </label></td>
+                      </tr>
+   
+    <tr>
+      <td>Reason(s) For Appointment</td>
+	  <td><label>
+                          <select name="reason" id="reason">
+						   <option value="">Appointment Reason</option>
+                            <option value="Exam +/- Vaccination">Exam +/- Vaccination</option>
+                            <option value="New Clinet">New Client/Patient Vist</option>
+                            <option value="Sick Pet Exam">Sick Pet Exam</option>
+                            <option value="Large Animal Exam">Large Animal Exam</option>
+                            <option value="Medical Refill">Medication Refill</option>
+							<option value="Surgery">Surgery</option>
+							<option value="Dental">Dental</option>
+							<option value="Other">Other</option>
+							<option value="drop">Drop Off Appintment</option>
+                          </select>
+                        </label></td>
+      
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td><input name="date" type="date" id="pet_name5"   required="" /></td>
+    </tr>
+
+    <tr>
+      <td>Time</td>
+      <td><input name="time" type="time" id="pet_name6"   required="" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><span class="tp">
+        <input type="submit" name="btn" value="Booking" onsubmit="javascript:alert('success');" />
+      </span></td>
+    </tr>
+  </table>
+  </form>
+ <center><b>WORKING HOURS </b><br>
+Monday: 8:00 AM - 5:00 PM <br>
+Tuesday: 8:00 AM - 5:00 PM <br>
+Wednesday: 8:00 AM - 5:00 PM <br>
+Thursday: 8:00 AM - 5:00 PM <br>
+Friday: 8:00 AM - 5:00 PM <br>
+Saturday: Closed<br>
+Sunday: Closed
+</center>
+</body>
+</html>

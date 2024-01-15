@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<style>
+      body {
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+       {% include 'css/style2.css' %}
+    </style>
+
+<body onLoad="flashMessage()">
+<script>
+    function flashMessage()
+    {
+        if("{{flashMessage}}"=="True"){
+            alert("{{data}}");
+        }
+    }
+</script>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+
+	<center><h3 class="title">Admin Login</h3></center>
+	<form  action="/admin_login" method="post" name="form1" id="form1">
+ 
+  <table height="127" align="center">
+    <tr>
+      <td>UserName</td>
+      <td><input type="text" name="uname" placeholder="Username" required="" /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="pass" placeholder="Password" required="" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><span class="tp">
+        <input type="submit" name="btn" value="Login"/>
+    </tr>
+  </table>
+</form>
+ 
+</body>
+</html>

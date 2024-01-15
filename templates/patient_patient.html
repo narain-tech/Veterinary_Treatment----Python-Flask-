@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<style>
+      body {
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      {% include 'css/style2.css' %}
+    </style>
+<body onLoad="flashMessage()">
+<script>
+    function flashMessage()
+    {
+        if("{{flashMessage}}"=="True"){
+            alert("{{data}}");
+        }
+    }
+</script>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+		
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+				<li><a href="/patient_appointment">Booking Appointment</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<li><a href="/">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<center><h3 class="title">User Detail's</h3></center>
+	
+ <form  action="/patient_patient" method="post" name="form1" id="form1">
+  <table height="127" align="center">
+    <tr>
+      <td>Name </td>
+      <td><input name="name" type="text" id="name"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><input name="phone" type="number" id="pet_name"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td><input name="age" type="number" id="pet_name2"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input name="email" type="text" id="pet_name3"   required="" /></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><input name="address" type="text" id="pet_name4"   required="" /></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><span class="tp">
+        {{ data }}
+        <input type="submit" name="btn" value="SUMBIT" />
+      </span></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<style>
+      body {
+
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+       {% include 'css/style2.css' %}
+    </style>
+<body>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+		
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+				
+				<li><a href="/">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<center><h3 class="title">View Booking Details </h3></center>
+	
+    
+<form  action="" method="post" name="form1" id="form1">
+ 
+  <table width="80%" height="127" align="center">
+    <tr>
+      <td>Id</td>
+      <td>Full Name </td>
+      <td>Email ID</td>
+      <td>Phone_num </td>
+      <td>Pet_name</td>
+      <td>Species</td>
+      <td>Reason</td>
+      <td>Date</td>
+		<td>Time</td>
+      <td>Delete</td>
+      <td>Edit</td>
+    </tr>
+	 {% for row in items %}
+    <tr>
+      <td>{{ row[0] }}</td>
+      <td>{{ row[1] }}</td>
+      <td>{{ row[2] }}</td>
+      <td>{{ row[3] }}</td>
+      <td>{{ row[4] }}</td>
+      <td>{{ row[5] }}</td>
+      <td>{{ row[6] }}</td>
+		<td>{{ row[7] }}</td>
+      <td>{{ row[8] }}</td>
+      <td><a href="admin_view_delete/{{ row[0] }}">delete</a></td>
+      <td><a href="admin_view_edit/{{ row[0] }}">edit</a></td>
+    </tr>
+	 {% endfor %}
+  </table>
+</form>
+</body>
+</html>

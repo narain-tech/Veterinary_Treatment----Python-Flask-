@@ -1,0 +1,93 @@
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+header {
+	background-color: #fff;
+	color: #333;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav li a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	color: #f7941d;
+}
+
+.logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+main {
+	margin: 20px;
+}
+
+.banner {
+	background-color: #f7941d;
+	color: #fff;
+	padding: 100px;
+	text-align: center;
+}
+
+.banner h1 {
+	font-size: 36px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.dashboard h2 {
+	color: #333;
+	margin-top: 0;
+}
+
+.dashboard ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.dashboard li {
+	width: 200px;
+	height: 100px;
+	margin: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.dashboard li a {
+	color: #333;
+	text-decoration
+/* CSS Document */
+

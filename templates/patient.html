@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinary Treatment</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<style>
+      body {
+        background-image: url('image/bg3.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+       {% include 'css/style2.css' %}
+    </style>
+<body onLoad="flashMessage()">
+<script>
+    function flashMessage()
+    {
+        if("{{flashMessage}}"=="True"){
+            alert("{{data}}");
+        }
+    }
+</script>
+	<header>
+		<div class="logo">
+			<img src="static/image/veterinarian.png" height=100px" width="100px" alt="Veterinary Treatment Logo">
+		</div>
+		
+ <h3><b>Veterinary Treatment</b></h3>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/admin">Admin</a></li>
+				<li><a href="/patient">Booking Appointment</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<center><h3 class="title">User Login</h3></center>
+	
+ <form  action="/patient" method="post" name="form1" id="form1">
+  <table height="127" align="center">
+    <tr>
+      <td>Email Id </td>
+      <td><input type="text" name="uname" placeholder="Email" required="" /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="pass" placeholder="Password" required="" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="btn" value="Login" />
+         </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><a href="/patient_register">New User </a></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
